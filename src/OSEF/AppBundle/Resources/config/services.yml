@@ -1,0 +1,10 @@
+services:
+#    osef_app.article.listener:
+#        class: OSEF\AppBundle\Listener\ArticleListener
+#        tags:
+#            - { name: doctrine.event_listener, event: prePersist }
+#            - { name: doctrine.event_listener, event: preUpdate }
+
+#    osef_app.example:
+#        class: OSEF\AppBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

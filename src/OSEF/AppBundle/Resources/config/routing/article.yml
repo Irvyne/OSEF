@@ -1,0 +1,30 @@
+article:
+    path:     /
+    defaults: { _controller: "OSEFAppBundle:Article:index" }
+
+article_new:
+    path:     /new
+    defaults: { _controller: "OSEFAppBundle:Article:new" }
+
+article_create:
+    path:     /create
+    defaults: { _controller: "OSEFAppBundle:Article:create" }
+    requirements: { _method: post }
+
+article_show:
+    path:     /{slug}
+    defaults: { _controller: "OSEFAppBundle:Article:show" }
+
+article_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "OSEFAppBundle:Article:edit" }
+
+article_update:
+    path:     /{id}/update
+    defaults: { _controller: "OSEFAppBundle:Article:update" }
+    requirements: { _method: post|put }
+
+article_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "OSEFAppBundle:Article:delete" }
+    requirements: { _method: post|delete }
