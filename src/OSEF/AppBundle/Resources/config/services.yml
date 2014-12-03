@@ -1,4 +1,12 @@
+parameters:
+    osef_app.article.entity.class:  OSEF\AppBundle\Entity\Article
+    osef_app.article.manager.class: OSEF\AppBundle\Manager\ArticleManager
+
 services:
+    osef_app.article.manager:
+        class:     %osef_app.article.manager.class%
+        arguments: [@doctrine.orm.default_entity_manager, %osef_app.article.entity.class%]
+
 #    osef_app.article.listener:
 #        class: OSEF\AppBundle\Listener\ArticleListener
 #        tags:

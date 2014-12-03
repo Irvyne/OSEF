@@ -30,7 +30,7 @@
                         <a href="{{ path('article_show', { 'slug': entity.slug }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('article_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('article_update', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
                 </td>
@@ -46,4 +46,4 @@
             </a>
         </li>
     </ul>
-    {% endblock %}
+{% endblock %}
