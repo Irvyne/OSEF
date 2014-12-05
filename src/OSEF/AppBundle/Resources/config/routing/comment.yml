@@ -1,0 +1,22 @@
+comment:
+    path:     /
+    defaults: { _controller: "OSEFAppBundle:Comment:index" }
+
+comment_show:
+    path:     /{id}/show
+    defaults: { _controller: "OSEFAppBundle:Comment:show" }
+
+comment_create:
+    path:     /create
+    defaults: { _controller: "OSEFAppBundle:Comment:create" }
+    requirements: { _method: get|post }
+
+comment_update:
+    path:     /{id}/update
+    defaults: { _controller: "OSEFAppBundle:Comment:update" }
+    requirements: { _method: get|post|put }
+
+comment_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "OSEFAppBundle:Comment:delete" }
+    requirements: { _method: post|delete }

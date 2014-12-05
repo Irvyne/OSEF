@@ -1,0 +1,4 @@
+services:
+#    osef_user.example:
+#        class: OSEF\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

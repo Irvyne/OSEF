@@ -7,12 +7,12 @@
 namespace OSEF\AppBundle\Manager;
 
 use OSEF\CommonBundle\Doctrine\BaseManager;
-use OSEF\AppBundle\Entity\ArticleRepository;
+use OSEF\AppBundle\Entity\CommentRepository;
 
-class ArticleManager extends BaseManager
+class CommentManager extends BaseManager
 {
     /**
-     * @return ArticleRepository
+     * @return CommentRepository
      */
     public function getRepository()
     {

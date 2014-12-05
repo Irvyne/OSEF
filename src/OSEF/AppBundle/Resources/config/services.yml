@@ -1,11 +1,29 @@
 parameters:
-    osef_app.article.entity.class:  OSEF\AppBundle\Entity\Article
-    osef_app.article.manager.class: OSEF\AppBundle\Manager\ArticleManager
+    osef_app.article.entity.class:    OSEF\AppBundle\Entity\Article
+    osef_app.article.manager.class:   OSEF\AppBundle\Manager\ArticleManager
+    osef_app.article.form_type.class: OSEF\AppBundle\Form\ArticleType
+    osef_app.comment.entity.class:    OSEF\AppBundle\Entity\Comment
+    osef_app.comment.manager.class:   OSEF\AppBundle\Manager\CommentManager
+    osef_app.comment.form_type.class: OSEF\AppBundle\Form\CommentType
 
 services:
     osef_app.article.manager:
         class:     %osef_app.article.manager.class%
         arguments: [@doctrine.orm.default_entity_manager, %osef_app.article.entity.class%]
+
+    osef_app.article.form_type:
+        class: %osef_app.article.form_type.class%
+        tags:
+            - { name: form.type, alias: osef_appbundle_article }
+
+    osef_app.comment.manager:
+        class:     %osef_app.comment.manager.class%
+        arguments: [@doctrine.orm.default_entity_manager, %osef_app.comment.entity.class%]
+
+    osef_app.comment.form_type:
+        class: %osef_app.comment.form_type.class%
+        tags:
+            - { name: form.type, alias: osef_appbundle_comment }
 
 #    osef_app.article.listener:
 #        class: OSEF\AppBundle\Listener\ArticleListener

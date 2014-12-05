@@ -35,7 +35,7 @@ class ArticleController extends Controller
      */
     private function createCreateForm(Article $entity)
     {
-        $form = $this->createForm(new ArticleType(), $entity, array(
+        $form = $this->createForm('osef_appbundle_article', $entity, array(
             'action' => $this->generateUrl('article_new'),
             'method' => 'POST',
         ));
@@ -105,7 +105,7 @@ class ArticleController extends Controller
     */
     private function createEditForm(Article $entity)
     {
-        $form = $this->createForm(new ArticleType(), $entity, array(
+        $form = $this->createForm('osef_appbundle_article', $entity, array(
             'action' => $this->generateUrl('article_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));

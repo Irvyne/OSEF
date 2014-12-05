@@ -1,3 +1,7 @@
+osef_user:
+    resource: "@OSEFUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 osef_common:
     resource: "@OSEFCommonBundle/Resources/config/routing.yml"
     prefix:   /
